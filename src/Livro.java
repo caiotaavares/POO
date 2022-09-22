@@ -53,4 +53,14 @@ public class Livro {
     public Boolean getEstaEmprestado() {
         return estaEmprestado;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(this.codigoLivro);
+        sb.append(this.nome);
+        sb.append(this.editora);
+        sb.append(this.estaEmprestado);
+        return sb.toString();
+    }
 }

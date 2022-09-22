@@ -1,18 +1,23 @@
+import java.lang.reflect.Array;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Calendar;
 
 public class Emprestimo {
 
     private int codigoEmprestimo;
     private int codigoUsuario;
-    private Livro livrosDoEmprestimo;
+    private ArrayList<Livro> livrosDoEmprestimo;
     private LocalDate dataEmprestimo;
     private String dataDevolucao;
 
     public Emprestimo(int codigoEmprestimo, int codigoUsuario, Livro livrosDoEmprestimo) {
+        ArrayList<Livro> lista = new ArrayList<Livro>();
+
         this.codigoEmprestimo = codigoEmprestimo;
         this.codigoUsuario = codigoUsuario;
-        this.livrosDoEmprestimo = livrosDoEmprestimo;
+//        this.livrosDoEmprestimo = livrosDoEmprestimo;
+        System.out.println(livrosDoEmprestimo);
         this.dataEmprestimo = LocalDate.now();
         this.dataDevolucao = dataEmprestimo.plusDays(4).toString();
     }
@@ -42,10 +47,10 @@ public class Emprestimo {
     }
 
     // LIVRO DO EMPRESTIMO
-    private void setLivrosDoEmprestimo(Livro livrosDoEmprestimo) {
+    private void setLivrosDoEmprestimo(ArrayList<Livro> livrosDoEmprestimo) {
         this.livrosDoEmprestimo = livrosDoEmprestimo;
     }
-    private Livro getLivrosDoEmprestimo() {
+    private ArrayList<Livro> getLivrosDoEmprestimo() {
         return livrosDoEmprestimo;
     }
 
