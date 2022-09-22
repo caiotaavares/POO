@@ -22,5 +22,13 @@ public class Controller {
                 "buno@bruno.com",
                 "Profissional em POO"
         );
+
+        Emprestimo emprestimo = new Emprestimo(
+            1,
+                1,
+                livro0
+        );
+
+        emprestimo.exibir();
     }
 }
