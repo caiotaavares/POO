@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 import java.util.Calendar;
 
 public class Emprestimo {
@@ -5,8 +6,24 @@ public class Emprestimo {
     private int codigoEmprestimo;
     private int codigoUsuario;
     private Livro livrosDoEmprestimo;
-    private Calendar dataEmprestimo;
-    private Calendar dataDevolucao;
+    private LocalDate dataEmprestimo;
+    private String dataDevolucao;
+
+    public Emprestimo(int codigoEmprestimo, int codigoUsuario, Livro livrosDoEmprestimo) {
+        this.codigoEmprestimo = codigoEmprestimo;
+        this.codigoUsuario = codigoUsuario;
+        this.livrosDoEmprestimo = livrosDoEmprestimo;
+        this.dataEmprestimo = LocalDate.now();
+        this.dataDevolucao = dataEmprestimo.plusDays(4).toString();
+    }
+
+    public void exibir() {
+        System.out.println(codigoEmprestimo);
+        System.out.println(codigoUsuario);
+        System.out.println(livrosDoEmprestimo);
+        System.out.println(dataEmprestimo);
+        System.out.println(dataDevolucao);
+    }
 
     // CODIGO EMPRESTIMO
     private void setCodigoEmprestimo(int codigoEmprestimo) {
@@ -33,12 +50,15 @@ public class Emprestimo {
     }
 
     // DATA EMPRESTIMO
-    private void setDataEmprestimo(Calendar dataEmprestimo) {
-        this.dataEmprestimo = dataEmprestimo;
+    private void setDataEmprestimo(LocalDate dataEmprestimo) {
+        this.dataEmprestimo = LocalDate.now();
     }
-    private Calendar getDataEmprestimo() {
+    private LocalDate getDataEmprestimo() {
         return dataEmprestimo;
     }
 
     // DATA DEVOLUÇÃO
+    private void setDataDevolucao(LocalDate dataEmprestimo) {
+        this.dataDevolucao = dataEmprestimo.plusDays(4).toString();
+    }
 }
