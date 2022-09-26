@@ -1,7 +1,5 @@
-import java.lang.reflect.Array;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Calendar;
 
 public class Emprestimo {
 
@@ -11,23 +9,21 @@ public class Emprestimo {
     private LocalDate dataEmprestimo;
     private String dataDevolucao;
 
-    public Emprestimo(int codigoEmprestimo, int codigoUsuario, Livro livrosDoEmprestimo) {
-        ArrayList<Livro> lista = new ArrayList<Livro>();
-
+    public Emprestimo(int codigoEmprestimo, int codigoUsuario, ArrayList<Livro> livrosDoEmprestimo) {
         this.codigoEmprestimo = codigoEmprestimo;
         this.codigoUsuario = codigoUsuario;
-//        this.livrosDoEmprestimo = livrosDoEmprestimo;
-        System.out.println(livrosDoEmprestimo);
+        this.livrosDoEmprestimo = livrosDoEmprestimo;
         this.dataEmprestimo = LocalDate.now();
         this.dataDevolucao = dataEmprestimo.plusDays(4).toString();
+
     }
 
     public void exibir() {
-        System.out.println(codigoEmprestimo);
-        System.out.println(codigoUsuario);
+        System.out.printf("Codigo do empréstimo: %d \n", codigoEmprestimo);
+        System.out.printf("Código do usuário: %d \n", codigoUsuario);
         System.out.println(livrosDoEmprestimo);
-        System.out.println(dataEmprestimo);
-        System.out.println(dataDevolucao);
+        System.out.printf("Data do empréstimo: %s \n", dataEmprestimo);
+        System.out.printf("Data de devolução: %s \n", dataDevolucao);
     }
 
     // CODIGO EMPRESTIMO
@@ -35,7 +31,7 @@ public class Emprestimo {
         this.codigoEmprestimo = codigoEmprestimo;
     }
     private int getCodigoEmprestimo() {
-        return codigoEmprestimo;
+        return this.codigoEmprestimo;
     }
 
     // CODIGO USUARIO
