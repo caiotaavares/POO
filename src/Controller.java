@@ -33,11 +33,14 @@ public class Controller {
         ArrayList<Livro> livros = new ArrayList<>();
         livros.add(livro0);
         livros.add(livro1);
-        livros.add(livro2);
+
+        ArrayList<Usuario> usuarios = new ArrayList<>();
+        usuarios.add(aluno);
+        usuarios.add(professor);
 
         Emprestimo emprestimo = new Emprestimo(
             1,
-                aluno.codigoUsuario,
+                aluno.getCodigoUsuario(),
                 livros
         );
 
