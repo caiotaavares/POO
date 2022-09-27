@@ -1,3 +1,5 @@
+import java.lang.reflect.Array;
+
 public class Livro {
 
     private int codigoLivro;
@@ -54,7 +56,6 @@ public class Livro {
         return estaEmprestado;
     }
 
-    @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append(this.codigoLivro);

@@ -34,13 +34,9 @@ public class Controller {
         livros.add(livro0);
         livros.add(livro1);
 
-        ArrayList<Usuario> usuarios = new ArrayList<>();
-        usuarios.add(aluno);
-        usuarios.add(professor);
-
         Emprestimo emprestimo = new Emprestimo(
             1,
-                aluno.getCodigoUsuario(),
+                aluno,
                 livros
         );
 
