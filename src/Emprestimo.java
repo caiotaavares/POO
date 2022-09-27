@@ -1,28 +1,29 @@
 import java.time.LocalDate;
-import java.util.Calendar;
+import java.util.ArrayList;
 
 public class Emprestimo {
 
     private int codigoEmprestimo;
-    private int codigoUsuario;
-    private Livro livrosDoEmprestimo;
+    private Usuario usuario;
+    private ArrayList<Livro> livrosDoEmprestimo;
     private LocalDate dataEmprestimo;
     private String dataDevolucao;
 
-    public Emprestimo(int codigoEmprestimo, int codigoUsuario, Livro livrosDoEmprestimo) {
+    public Emprestimo(int codigoEmprestimo, Usuario usuario, ArrayList<Livro> livrosDoEmprestimo) {
         this.codigoEmprestimo = codigoEmprestimo;
-        this.codigoUsuario = codigoUsuario;
+        this.usuario = usuario;
         this.livrosDoEmprestimo = livrosDoEmprestimo;
         this.dataEmprestimo = LocalDate.now();
         this.dataDevolucao = dataEmprestimo.plusDays(4).toString();
+
     }
 
     public void exibir() {
-        System.out.println(codigoEmprestimo);
-        System.out.println(codigoUsuario);
-        System.out.println(livrosDoEmprestimo);
-        System.out.println(dataEmprestimo);
-        System.out.println(dataDevolucao);
+        System.out.printf("Codigo do empréstimo: %d \n", codigoEmprestimo);
+        System.out.printf("Usuário: " + usuario + "\n");
+        System.out.println("Livros: " + livrosDoEmprestimo + "\n");
+        System.out.printf("Data do empréstimo: %s \n", dataEmprestimo);
+        System.out.printf("Data de devolução: %s \n", dataDevolucao);
     }
 
     // CODIGO EMPRESTIMO
@@ -30,22 +31,22 @@ public class Emprestimo {
         this.codigoEmprestimo = codigoEmprestimo;
     }
     private int getCodigoEmprestimo() {
-        return codigoEmprestimo;
+        return this.codigoEmprestimo;
     }
 
     // CODIGO USUARIO
-    private void setCodigoUsuario(int codigoUsuario) {
-        this.codigoUsuario = codigoUsuario;
+    private void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
-    private int getCodigoUsuario() {
-        return codigoUsuario;
+    private Usuario getUsuario() {
+        return usuario;
     }
 
     // LIVRO DO EMPRESTIMO
-    private void setLivrosDoEmprestimo(Livro livrosDoEmprestimo) {
+    private void setLivrosDoEmprestimo(ArrayList<Livro> livrosDoEmprestimo) {
         this.livrosDoEmprestimo = livrosDoEmprestimo;
     }
-    private Livro getLivrosDoEmprestimo() {
+    private ArrayList<Livro> getLivrosDoEmprestimo() {
         return livrosDoEmprestimo;
     }
 

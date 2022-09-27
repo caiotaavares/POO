@@ -50,4 +50,15 @@ public class Usuario {
     public String getEmail() {
         return email;
     }
+
+
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(this.codigoUsuario);
+        sb.append(this.nome);
+        sb.append(this.cpf);
+        sb.append(this.email);
+        return sb.toString();
+    }
+
 }

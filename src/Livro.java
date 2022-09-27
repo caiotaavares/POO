@@ -1,3 +1,5 @@
+import java.lang.reflect.Array;
+
 public class Livro {
 
     private int codigoLivro;
@@ -52,5 +54,14 @@ public class Livro {
     }
     public Boolean getEstaEmprestado() {
         return estaEmprestado;
+    }
+
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(this.codigoLivro);
+        sb.append(this.nome);
+        sb.append(this.editora);
+        sb.append(this.estaEmprestado);
+        return sb.toString();
     }
 }
