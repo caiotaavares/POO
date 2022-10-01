@@ -11,7 +11,7 @@ public class Controller {
         Livro livro2 = new Livro(1, "O senhor dos aneis: as duas torres", "Atenova", false);
 
         // Usuários do tipo aluno
-        Usuario aluno = new Aluno(
+        Usuario aluno = new Usuario(
                 1,
                 "Caio Tavares",
                 "47448898754",
@@ -21,7 +21,7 @@ public class Controller {
         );
 
         // Usuários do tipo professor
-        Usuario professor = new Professor(
+        Usuario professor = new Usuario(
                 2,
                 "Bruno",
                 "23489765439",
