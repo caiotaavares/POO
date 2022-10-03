@@ -4,10 +4,10 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Biblioteca/Biblioteca.iml" filepath="$PROJECT_DIR$/Biblioteca/Biblioteca.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/POO.iml" filepath="$PROJECT_DIR$/.idea/POO.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lista01/atv01/atv01.iml" filepath="$PROJECT_DIR$/lista01/atv01/atv01.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lista01/atv02/atv02.iml" filepath="$PROJECT_DIR$/lista01/atv02/atv02.iml" />
-      <module fileurl="file://$PROJECT_DIR$/atv03/atv03.iml" filepath="$PROJECT_DIR$/atv03/atv03.iml" />
-      <module fileurl="file://$PROJECT_DIR$/atv04/atv04.iml" filepath="$PROJECT_DIR$/atv04/atv04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lista01atv01/lista01atv01.iml" filepath="$PROJECT_DIR$/lista01atv01/lista01atv01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lista01atv02/lista01atv02.iml" filepath="$PROJECT_DIR$/lista01atv02/lista01atv02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lista01atv03/lista01atv03.iml" filepath="$PROJECT_DIR$/lista01atv03/lista01atv03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lista01atv04/lista01atv04.iml" filepath="$PROJECT_DIR$/lista01atv04/lista01atv04.iml" />
     </modules>
   </component>
 </project>
